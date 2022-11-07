@@ -3,7 +3,7 @@ Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "tabctl32.ocx"
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form archives 
    BackColor       =   &H00000000&
    BorderStyle     =   4  'Fixed ToolWindow
@@ -29,6 +29,7 @@ Begin VB.Form archives
       _ExtentY        =   16325
       _Version        =   393216
       Tabs            =   5
+      Tab             =   4
       TabsPerRow      =   5
       TabHeight       =   520
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -42,7 +43,7 @@ Begin VB.Form archives
       EndProperty
       TabCaption(0)   =   "«·‰”Œ «·«Õ Ì«ÿÌ"
       TabPicture(0)   =   "archives.frx":0000
-      Tab(0).ControlEnabled=   -1  'True
+      Tab(0).ControlEnabled=   0   'False
       Tab(0).Control(0)=   "Picture8"
       Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
@@ -63,14 +64,15 @@ Begin VB.Form archives
       Tab(3).ControlCount=   1
       TabCaption(4)   =   "«” —Ã«⁄ «·„Õ–Ê›« "
       TabPicture(4)   =   "archives.frx":0070
-      Tab(4).ControlEnabled=   0   'False
+      Tab(4).ControlEnabled=   -1  'True
       Tab(4).Control(0)=   "Picture9"
+      Tab(4).Control(0).Enabled=   0   'False
       Tab(4).ControlCount=   1
       Begin VB.PictureBox Picture9 
          BackColor       =   &H00000000&
          BorderStyle     =   0  'None
          Height          =   8775
-         Left            =   -74880
+         Left            =   120
          ScaleHeight     =   8775
          ScaleWidth      =   14295
          TabIndex        =   86
@@ -736,7 +738,7 @@ Begin VB.Form archives
          BackColor       =   &H00000000&
          BorderStyle     =   0  'None
          Height          =   8775
-         Left            =   120
+         Left            =   -74880
          ScaleHeight     =   8775
          ScaleWidth      =   14295
          TabIndex        =   57
